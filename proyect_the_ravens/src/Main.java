@@ -80,10 +80,10 @@ public class Main {
         primero.setValor(5000000);
         System.out.println(primero.getValor());
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 
-=======
+//=======
         //Pruebas Merly
         System.out.println(segundo.getConcepto());
         segundo.setConcepto("carro");
@@ -96,6 +96,12 @@ public class Main {
         System.out.println(segundo.getUser());
         segundo.setUser("micafe08@hotmail.com");
         System.out.println(segundo.getUser());
->>>>>>> 538b4d2bd6330c0795e55845b0178fc88d06577e
+//>>>>>>> 538b4d2bd6330c0795e55845b0178fc88d06577e
+
+
+        //prueba Deyber Jimenez
+        System.out.println(deiver.getCorreo());
+        deiver.setCorreo("deyber.jimenez@unillanos.edu.co");
+        System.out.println(deiver.getCorreo());
     }
 }
