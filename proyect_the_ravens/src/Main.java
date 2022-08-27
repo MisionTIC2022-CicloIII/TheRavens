@@ -23,6 +23,7 @@ public class Main {
 
         //movimientos
         MovimientoDinero primero =new MovimientoDinero("compra mc ","juanjoduran2003@gmail.com","negativo",50000);
+        MovimientoDinero segundo =new MovimientoDinero("compra casa", "merlycampogue@hotmail.com", "positivo", 1000000);
 
         //EMPRESA
         System.out.println(coca_cola.getDireccion());
@@ -79,7 +80,22 @@ public class Main {
         primero.setValor(5000000);
         System.out.println(primero.getValor());
 
+<<<<<<< HEAD
 
 
+=======
+        //Pruebas Merly
+        System.out.println(segundo.getConcepto());
+        segundo.setConcepto("carro");
+        System.out.println(segundo.getConcepto());
+
+        System.out.println(segundo.getTipo());
+        segundo.setTipo("negativo");
+        System.out.println(segundo.getTipo());
+
+        System.out.println(segundo.getUser());
+        segundo.setUser("micafe08@hotmail.com");
+        System.out.println(segundo.getUser());
+>>>>>>> 538b4d2bd6330c0795e55845b0178fc88d06577e
     }
 }
