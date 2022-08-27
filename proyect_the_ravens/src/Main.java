@@ -18,6 +18,9 @@ public class Main {
         Empleado alfredo = new Empleado("Alfredo ALonso Gil Cuello", "gilcuello@gmail.com", "2", "operativo");
         Empleado deiver = new Empleado("Deyber Antonio Jiménez Gordillo ", "deyberantonio@gmail.com", "2", "operativo");
 
+        //pruebas Alfredo Gil
+        Empleado carlos = new Empleado("Carlos Arturo Salcedo Rivera", "carlos@gmail.com", "3", "operativo");
+
         //movimientos
         MovimientoDinero primero =new MovimientoDinero("compra mc ","juanjoduran2003@gmail.com","negativo",50000);
 
@@ -56,6 +59,9 @@ public class Main {
         alfredo.setNombre("alferero guzman");
         System.out.println(alfredo.getNombre());
 
+        //prueba Alfredo Gil
+        System.out.println(carlos.getNombre());
+
         //movimiento dinero
         System.out.println(primero.getConcepto());
         primero.setConcepto("pollo");
@@ -72,5 +78,8 @@ public class Main {
         System.out.println(primero.getValor());
         primero.setValor(5000000);
         System.out.println(primero.getValor());
+
+
+
     }
 }
