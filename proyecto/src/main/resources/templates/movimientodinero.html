@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+	  <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet">
+
+  </head>
+  <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js}" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <body>
+
+<!-- Ingresos y Egresos -->
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3" style="background-color:#F8FBF9">
+			<img height="150" width="150" src="css/logo.jpg" alt="" class="rounded-circle" style="margin: auto; display: block">
+      <br/>
+      <br/>
+      <br/>
+      <button type="button" name="button" class="btn btn-success btn-block" style="background-color: #3DF457">
+        <a class="text-center" style="font-size:18px; font-family: fantasy; color: #31271A" href="index2.html">Inicio</a>
+      </button>
+      <br/>
+      <br/>
+      <button type="button" name="button" class="btn btn-success btn-block" style="background-color: #3DF457">
+        <a class="text-center" style="font-size:18px; font-family: fantasy; color: #31271A" href="index3.html">Ingresos y Egresos</a>
+      </button>
+      <br/>
+      <br/>
+      <button type="button" name="button" class="btn btn-success btn-block" style="background-color: #3DF457" >
+        <a class="text-center" style="font-size:18px; font-family: fantasy; color: #31271A" href="index4.html">Usuarios</a>
+      </button>
+      <br/>
+      <br/>
+      <button type="button" name="button" class="btn btn-success btn-block" style="background-color: #3DF457">
+        <a class="text-center" style="font-size:18px; font-family: fantasy; color: #31271A" href="index5.html">Empresas</a>
+      </button>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+		</div>
+		<div class="col-md-9" style="background-color:#CFD1CF">
+      <h3>
+		  <p class="text-center" style="font-size:20px; font-family: fantasy; color: #31271A"><br/>Sistema de Gestión de Ingresos y Gastos</p>
+	  </h3>
+      </br>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index4.html" style="background-color:#8DE79A; font-family: serif ">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index5.html" style="background-color:#6DEF6D ; font-family: serif ">Empresas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" style="background-color:#61D161  ; font-family: serif ">Ingresos y Egresos</a>
+        </li>
+      </ul>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary me-md-2" type="button" style="background-color: #8DE79A; border-color:#51A851 ">
+            <a class="text-center" style="font-size:18px; font-family: monospace ; color: #31271A; width: 50px" th:href="@{/nuevomovimiento}">Nuevo</a>
+        </button>
+      </div>
+      </br>
+			<table class="table table-bordered" style="border-width: 2px">
+				<thead>
+					<tr style="background-color: #8DE79A">
+						<th class="text-center" style="font-size:18px; font-family: inherit; color: #31271A">
+							Concepto
+						</th>
+						<th class="text-center" style="font-size:18px; font-family: inherit; color: #31271A">
+							Monto
+						</th>
+						<th class="text-center" style="font-size:18px; font-family: inherit; color: #31271A">
+							Fecha
+						</th>
+						<th class="text-center" style="font-size:18px; font-family: inherit; color: #31271A">
+							Usuario
+						</th>
+						<th class="text-center" style="font-size:18px; font-family: inherit; color: #31271A">
+							Editar
+						</th>
+                        <th class="text-center" style="font-size:18px; font-family: inherit; color: #31271A">
+                            Borrar
+                        </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="movimiento : ${movimientos}">
+						<td th:text="${movimiento.concepto}"></td>
+						<td th:text="${movimiento.monto}"></td>
+						<td th:text="${movimiento.fecha}"></td>
+						<td></td>
+						<td><a th:href="@{/movimientodinero/editar/{id} (id = ${movimiento.id})}">Editar</a></td>
+                        <td><a th:href="@{/movimientodinero/borrar/{id} (id = ${movimiento.id})}">Borrar</a></td>
+
+					</tr>
+					<tr>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+						<td>
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-success me-md-2" type="button" style="background-color: #8DE79A; border-color:#51A851 ">
+            <p class="text-center" style="font-size:18px; font-family: monospace ; color: #31271A; width: 200px">TOTAL = $$$$$$$$$$</p>
+        </button>
+      </div>
+		</div>
+	</div>
+</div>
+
+
